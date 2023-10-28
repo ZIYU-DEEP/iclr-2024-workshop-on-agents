@@ -13,7 +13,24 @@
 \usepackage{url}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{booktabs}
+\usepackage{graphicx}
 
+%%%%%%%%%%%%%%%% Colors %%%%%%%%%%%%%%%%
+\newcounter{exa}
+\definecolor{gblue}{RGB}{66,133,244}
+\definecolor{gred}{RGB}{219,68,55}
+\definecolor{gyellow}{RGB}{244,180,0}
+\definecolor{ggreen}{RGB}{15,157,88}
+\definecolor{lpcolor}{RGB}{42,74,138}
+\definecolor{morelcolor}{RGB}{185,18,32}
+\definecolor{bgcolor}{RGB}{230,245,208}
+\definecolor{framecolor}{RGB}{244,109,67}
+\definecolor{mulberry}{rgb}{0.77, 0.29, 0.55}
+\hypersetup{colorlinks=true,
+            citecolor=ggreen,
+            urlcolor=gblue,
+            linkcolor=purple}
 
 \title{\Large The $1^{\text{st}}$ Workshop on Society of Agents with Large Language Models\\{\large{\normalfont On Theory and Practice in Embodiments, Alignments, Multi-Agent Simulations and More}}}
 
@@ -38,7 +55,7 @@
         \name Mingyu Ding \email myding@berkeley.edu\\
         \addr UC Berkeley \\ 
         \\        
-        \name Linxi 'Jim' Fan \email linxif@nvidia.com\\
+        \name Linxi ``Jim'' Fan \email linxif@nvidia.com\\
         \addr NVIDIA \\ 
         \\        
         \name Animesh Garg \email animesh.garg@gatech.edu\\
@@ -108,7 +125,7 @@ We focus on shedding light on the following important questions:
 Building on the fundamental objectives of this workshop, our agenda is meticulously crafted to delve into various pivotal facets of large models and autonomous agents, addressing a range of crucial questions through the following thematic areas:
 
 
-\paragraph{Foundation Models for Agents.}. This theme is on various aspects of foundation models for agents, including network architectures, optimization methods, training protocols, and so on.
+\paragraph{Foundation Models for Agents.} This theme is on various aspects of foundation models for agents, including network architectures, optimization methods, training protocols, and so on.
 
 \paragraph{Algorithms and Systems for and with Agents.} We focus on enhancing agent performance using practical algorithm and system designs. For example, despite the advancements in LLM-based agents, their planning and reasoning capabilities remain limited. To address this, we're interested in algorithms such as curriculum, active, continual, meta learning and so on. We are also interested in how the inclusion of agents can improve existing algorithms and systems.
 
@@ -124,17 +141,280 @@ Evaluation Protocols, Benchmarks, Datasets, and Applications for Agents: A parti
 \paragraph{Safety, Alignment and Other Societal Concerns with Agents.} We look into safety and alignment issues for large model based agents, including concerns like trustworthiness, privacy, fairness and bias. We pay special attention to emerging adversarial attacks on foundation models and agent systems, which are extremely crucial given the wide spread of pretrained models and agent APIs. 
 
 
-With the wide coverage, this year we put special emphasis on: {\bf Theoretical Foundations of Agents}, {\bf Automation, Simulation and Interaction in Agent Society}, {\bf Embodied and Multimodal Agents}, {\bf Safety and Alignment Issues}. \textcolor{red}{The topics may be adjusted to prevent overlaps. Given the significant impact and widespread applications of AI agents, our goal is to complement with other workshops with potentially similar topics, ensuring our unique contributions stand out, corroborated by our distinctive backgrounds of organizers and speakers.}
+With the wide coverage, this year we put special emphasis on: {\bf Theoretical Foundations of Agents}, {\bf Automation, Simulation and Interaction in Agent Society}, {\bf Embodied and Multimodal Agents}, {\bf Safety and Alignment Issues}. 
+
+\textcolor{red}{The topics may be adjusted to prevent overlaps. Given the significant impact and widespread applications of AI agents, our goal is to complement with other workshops with potentially similar topics, ensuring our unique contributions stand out, corroborated by our distinctive backgrounds of organizers and speakers.}
 
 \section{Modality}
 The workshop will be hybrid, offering both in-person and virtual attendance options to cater to everyone's needs, ensuring a seamless and inclusive experience for all.
 
+\section{Anticipated Audience Size}
+Anticipated audience size is approximately 200 to 300 participants, ranging from industry professionals, researchers, graduate students, and enthusiasts alike. 
+
+This workshop holds particular significance at this ICLR conference due to the rapidly growing interest and advancements in large language models and autonomous agents. As these technologies continue to evolve, it is crucial to address the challenges they pose and explore their potential impact on society. By offering insights into novel autonomous agents and providing talks, this workshop aims to equip a broad audience with the necessary tools and knowledge to delve into this exciting field. 
+
+\newpage
+
 \section{Tentative Schedule}
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+09:00 & Introduction and opening remarks                                \\ \midrule
+09:10 & Invited Talk 1 (Multi-Modal Agents and Real-World Applications) \\
+09:40 & Oral Presentation 1                                             \\
+10:00 & Poster Session 1                                                \\
+10:30 & Coffee Break / Meet and Greet                                   \\
+11:00 & Poster Session 2                                                \\
+11:30 & Invited Talk 2 (Fundamental Algorithms for Agents)              \\
+12:00 & Lunch Break                                                     \\
+13:30 & Invited Talk 3 (Interactive and Evolving Agents)                \\
+14:00 & Invited Talk 4 (Embodied Agents)                                \\
+14:30 & Poster Session 3                                                \\
+15:00 & Coffee Break / Meet and Greet                                   \\
+15:20 & Oral Presentation 2                                             \\
+15:40 & Invited Talk 5 (Evaluation Benchmarks for Agents)               \\
+16:10 & Contributed Talk 1 (Theoretical Foundations of Agents)          \\
+16:40 & Contributed Talk 2 (Mind, Society and Agents)                   \\
+17:10 & Panel Discussion (The Distinct Alignment Issue from Agents)     \\
+18:00 & Closing Remarks / Best Paper Award                              \\ \bottomrule
+\end{tabular}
+\caption{Tentative schedules.}
+\label{tab:sch}
+\end{table}
 
 
 
+\section{Organizers and Biographies}
+\textbf{Guohao Li} is an artificial intelligence researcher and an open source contributor working on building intelligent agents that can perceive, learn, communicate, reason and act. He is the core lead of the open source projects CAMEL-AI.org and DeepGCNs.org and a core member of PyG.org. Guohao Li obtained his PhD degree in Computer Science at King Abdullah University of Science and Technology (KAUST) advised by Prof. Bernard Ghanem. During his PhD studies, he worked at Intel ISL as a research intern. He visited ETHz CVL as a visiting researcher. He also worked at Kumo AI as the first intern. His primary research interests include Autonomous Agents, Graph Machine Learning, Computer Vision and Embodied AI. He has published related papers in top tier conferences and journals such as ICCV, CVPR, ICML, NeurIPS, RSS, 3DV and TPAMI. More details can be found at \href{https://ghli.org/}{https://ghli.org/}.
 
 
+\textbf{Jiankai Sun} is a PhD student at Stanford University. His research focuses on robotics, embodied intelligence, computer vision, and decision-making, with the aim of developing innovative intelligent systems capable of understanding their environment, engaging in natural interactions with humans, and continually improving their performance through learning and adaptation. By integrating visual, machine learning, and control algorithms, he seeks to apply intelligent agents in real-world scenarios, such as smart homes, autonomous navigation, and collaborative applications, ultimately enhancing people's lives. Recently, he has been exploring the interdisciplinary field of implicit neural representations, robotics and language agents, aiming to enable intelligent agents to interact with the physical world more safely and robustly. He has published more than twenty papers in top conferences and journals in robotics and cyber-physical systems, including NeurIPS, ICCV, CoRL, RA-L, JBHI, ICRA, IROS, ITSC, AAAI, and has served as a reviewer for conferences such as ICML, NeurIPS, ICLR, CDC, CVPR, ICCV, ICRA, IROS, IJCAI, TNNLS, and RA-L. He has received awards such as the 2023 WAIC YunFan Award, Stanford University Engineering Fellowship, CoRL 2022 Best Paper Nomination, ICML 2021 Expert Reviewer, NeurIPS 2020 Top 10\% of High-scoring Reviewer, Runner-up in the CVPR 2019 Habitat Navigation Challenge, UCLA CSST Scholarship, and SenseTime Scholarship etc. He has interned at Tencent Robotics X, and Baidu Autonomous Driving Lab. He has also visited UC Berkeley's BAIR, under the supervision of Professor Trevor Darrell, and conducted research at VCLA through the UCLA CSST program, under the supervision of Professor Zhu Songchun, winning awards in multiple intelligent agent navigation and interaction competitions. More details can be found at \href{http://web.stanford.edu/~jksun/}{http://web.stanford.edu/~jksun/}. 
+
+
+\textbf{Ziyu Ye} is a PhD student in computer science at The University of Chicago. Her research encompasses theoretical foundations and practical algorithms for sequential decision making and deep learning models. Prior to her PhD studies, she worked on policymaking and theoretical economics, which provides useful tools in understanding agent behaviors and devising mechanisms. Her ultimate objective is to architect intelligent agents that really think, learn, and interact with themselves and humans, while adeptly manipulating their environment in a fairly sophisticated way. Ziyu has published related papers in conferences such as NeurIPS and IJCAI, and has served as a reviewer for NeurIPS, ICML, ICLR and AISTATS. She is also a contributor of CAMEL-AI.org and the founder of Avolution AI. More details can be found at \href{https://ziyu-deep.github.io/about/}{https://ziyu-deep.github.io/about/}. 
+
+
+\textbf{Mac Schwager} is an Associate Professor at Stanford University. He earned his BS from Stanford in 2000, his MS from MIT in 2005, and his PhD from MIT in 2009. He was a postdoc jointly at UPenn and MIT from 2009 to 2012, and was an assistant professor at Boston University from 2012 to 2015, before joining Stanford in 2015. His research interests are in distributed algorithms for coordination, estimation, and learning in groups of robots and animals. More details can be found at \href{https://web.stanford.edu/~schwager/index.html}{https://web.stanford.edu/~schwager/index.html}. 
+
+
+\textbf{Philip Torr} is a full professor at Oxford. He did his PhD (DPhil) at the Robotics Research Group of the University of Oxford under Professor David Murray of the Active Vision Group. He worked for another three years at Oxford as a research fellow, and still maintains close contact as visiting fellow there. He left Oxford to work for six years as a research scientist for Microsoft Research, first in Redmond, USA, in the Vision Technology Group, then in Cambridge founding the vision side of the Machine Learning and Perception Group. He then became a Professor in in Computer Vision and Machine Learning at Oxford Brookes University, where he has brought in over one million pounds in grants for which he is PI. Recently in 2013, Philip returned to Oxford as full professor where he has established the Torr Vision group. He won several awards including the Marr prize (the highest honor in vision) in 1998. He is a Royal Society Wolfson Research Merit Award Holder. Recently, together with members of his group, he has won several other awards including an honorary mention at the NIPS 2007 conference for the paper 'P. Kumar, V. Kolmorgorov, and P.H.S. Torr, An Analysis of Convex Relaxations for MAP Estimation', in NIPS 21, Neural Information Processing Conference, and (oral) Best Paper at Conference for 'O. Woodford, P.H.S. Torr, I. Reid, and A.W. Fitzgibbon, Global Stereo Reconstruction under Second Order Smoothness Priors', in CVPR, 2008 . More recently he has been awarded best science paper at BMVC 2010 and ECCV 2010. He was involved in the algorithm design for Boujou released by 2D3. Boujou has won a clutch of industry awards, including Computer Graphics World Innovation Award, IABM Peter Wayne Award, and CATS Award for Innovation, and a technical EMMY. He then worked closely with this Oxford based company as well as other companies such as Sony on the Wonderbook project. He is a director of new Oxford based spin out OxSight, and Chief Scientific Advisor for Five AI. He was elected Fellow of the Royal Academy of Engineering (FREng) in 2019, and Fellow of the Royal Society (FRS) in 2021 for contributions to computer vision. In 2021 he was made Turing AI world leading researcher fellow. More details can be found at \href{https://eng.ox.ac.uk/people/philip-torr/}{https://eng.ox.ac.uk/people/philip-torr/}.
+
+\textbf{Masayoshi Tomizuka} received his B.S. and M.S. from Keio University in 1968 and 1970, respectively. He received his Ph. D. from MIT in 1974, after which he joined the ME Department at UC Berkeley. Here, he served as the Vice Chair of Instruction from Dec. 1989 to Dec. 1991, and as the Vice Chair of graduate studies from Jul. 1995 to Dec. 1996. He is currently the Associate Dean of Academic Affairs for the College of Engineering at UC Berkeley. From 2009 to 2011, he was the Executive Associate Dean for the College of Engineering at UC Berkeley. He also served as Program Director of the Dynamic Systems and Control Program at the National Science Foundation from Sept. 2002 to Dec. 2004. Prof. Tomizuka’s research interests include optimal and adaptive control, digital control, signal processing, motion control, mechatronics and their applications in robotics, manufacturing, data storage devices, vehicles, and human-machine systems. More details can be found at \href{https://msc.berkeley.edu/people/tomizuka.html}{https://msc.berkeley.edu/people/tomizuka.html}. 
+
+
+\textbf{Haifeng Xu} is an assistant professor at The University of Chicago. He directs the Sigma Lab (Strategic Intelligence for Machine Agents). Prior to UChicago, he was an assistant professor at UVA and (even before) a postdoc at Harvard hosted by Yiling Chen and David Parkes. He received a PhD in Computer Science from USC advised by Shaddin Dughmi and Milind Tambe (now at Harvard), after writing this dissertation which was recognized by the ACM SIGecom Dissertation Award and IFAAMAS Victor Lesser Distinguished Dissertation Award. He recently received Early Career Spotlight on International Joint Conference on Artificial Intelligence (IJCAI). He works on the economics of machine learning — i.e., the economic aspects of machine learning itself and, conversely, designing ML algorithms for economic problems. More broadly, Haifeng is interested in decision making and machine learning in multi-agent setups, particularly in informationally complex environments with limited or asymmetric access to information. More details can be found at \href{http://www.haifeng-xu.com/}{http://www.haifeng-xu.com/}. 
+
+
+\textbf{Animesh Garg} is a Stephen Fleming Early Career Professor in Computer Science at Georgia Tech. Prior to this, he was an Assistant Professor of Computer Science at University of Toronto and a Faculty Member at the Vector Institute. He directed the UofT People, AI and Robotics (PAIR) group. He was affiliated with Mechanical and Industrial Engineering (courtesy) and UofT Robotics Institute. He is also a Sr. Research Scientist at NVIDIA. He earned M.S. in Computer Science and Ph.D. in Operations Research from UC, Berkeley. He worked with Ken Goldberg at Berkeley AI Research (BAIR). He also worked closely with Pieter Abbeel, Alper Atamturk \& UCSF Radiation Oncology. He was later a postdoc at Stanford AI Lab with Fei-Fei Li and Silvio Savarese. His research vision is to build the Algorithmic Foundations for Generalizable Autonomy, that enables robots to acquire skills, at both cognitive \& dexterous levels, and to seamlessly interact \& collaborate with humans in novel environments. His group focuses on understanding structured inductive biases and causality for decision making. In particular they are looking at multimodal object-centric and spatiotemporal event representations, self-supervised pre-training for reinforcement learning \& control, principle of efficient dexterous skill learning. More information can be found at \href{https://animesh.garg.tech/}{https://animesh.garg.tech/}. 
+
+
+\textbf{Zijian Wang} is a research scientist at Meta Reality Lab. His primary focus is multi-robot systems, for which he designs distributed planning and control algorithms that enable a group of intelligent robots to either collaborate on a common task, or compete among adversarial agents.  He obtained his Ph.D. degree at Stanford University, advised by Prof. Mac Schwager. More information can be found at \href{http://web.stanford.edu/~zjwang/}{http://web.stanford.edu/~zjwang/}. 
+
+
+\textbf{Shuran Song} is an Assistant Professor of Electrical Engineering, by courtesy, of Computer Science at Stanford University Adjunct Associate Professor of Computer Science at Columbia University. He leads the Robotics and Embodied AI Lab at Stanford University (REAL@Stanford). He is interested in developing algorithms that enable intelligent systems to learn from their interactions with the physical world, and autonomously acquire the perception and manipulation skills necessary to execute complex tasks and assist people. To learn more about my group's research please visit our REAL website \href{https://shurans.github.io/}{https://shurans.github.io/}.
+
+
+\textbf{Liang-Jun Zhang} is currently a Research Director at Baidu USA, leading Robotics and Auto-Driving Lab (RAL). From Nov 2016 to Oct 2018, he worked as a principal engineer for a stealth-mode autonomous driving startup in silicon valley, leading planning/control/simulation/validation teams on creating disruptive AI and autonomous driving solutions. From Oct 2012 to 2016, he worked for Samsung Research America on developing next generation graphics/computing software and hardware solutions for mobile devices. In 2012, he worked for Honda Research Institute USA, developing path planning, vision and control algorithms for autonomous navigation. He was a Computing Innovation Fellow hosted by the Department of Computer Science at Stanford University from 2009 to 2011. His mentor was Prof. Jean-Claude Latombe. He received his Ph.D. from the Department of Computer Science at the University of North Carolina - Chapel Hill in 2009. His Ph.D. advisor was Prof. Dinesh Manocha. He was a member of the GAMMA group. More information can be found at \href{https://www.cs.unc.edu/~zlj/}{https://www.cs.unc.edu/~zlj/}.
+
+
+\textbf{Mingyu Ding} is a postdoc at UC Berkeley working with Prof. Masayoshi Tomizuka, a distinguished member of National Academy of Engineering, and was a visiting scholar at MIT working with Prof.Joshua Tenenbaum. Before that, he received his PhD from the University of Hong Kong advised by Prof. Ping Luo, and his B.S. from Renmin University of China under the supervision of Prof. Zhiwu Lu. His research interests lie at the intersection of embodied AI, robotics, and vision. More information can be found at \href{https://dingmyu.github.io/}{https://dingmyu.github.io/}.
+
+
+\textbf{Jim ``Linxi'' Fan} is a research scientist at NVIDIA AI. His primary focus is to develop generally capable autonomous agents. To tackle this grand challenge, his research efforts span foundation models, policy learning, robotics, multimodal learning, and large-scale systems. He obtained his Ph.D. degree at Stanford Vision Lab, advised by Prof. Fei-Fei Li. Previously, He did research internships at NVIDIA, Google Cloud AI, OpenAI, Baidu Silicon Valley AI Lab, and Mila-Quebec AI Institute. More information can be found at \href{https://jimfan.me/}{https://jimfan.me/}.  
+
+
+
+\section{Plans for Get the Audience}
+To ensure a robust audience engagement for our workshop, we have devised a multi-faceted promotional strategy that leverages both online and offline channels.
+\begin{itemize}
+    \item Social Media Promotion: We plan to harness the power of social media platforms to foster a buzz around our workshop. For example, a dedicated hashtag on Twitter will centralize updates and discussions, while sharing speaker profiles and engaging content will build anticipation. On Reddit, engaging with relevant subreddits will help spark discussions and raise awareness. We plan to use Discord and Slack for pre-event interactions, allowing prospective attendees to engage with organizers and speakers, further enriching the community around our workshop.
+    \item Industry Partnerships: We plan to collaborate with industry partners who align with our workshop's themes. These partnerships will allow us to tap into their networks for promoting our event, possibly through co-hosted webinars or shared promotional activities.
+    \item Academic Networks: Utilizing academic mailing lists and forums, we will disseminate information about the workshop to relevant academic communities. Engaging with university departments and research groups will also be part of our strategy to reach a wider audience.
+    \item Webinars and Online Tutorials: In the run-up to the workshop, we will host a series of webinars and online tutorials that delve into the topics and themes of the main event. By presenting glimpses of the high-quality content attendees can expect, we aim to stir interest and enthusiasm. These sessions will feature insights from some of our keynote speakers, fostering early engagement and allowing potential attendees to gauge the depth and breadth of discussions they can anticipate. Hosting such webinars or Q\&A sessions on platforms like Discord or Slack can also help in building a broader community and generating interest in the upcoming workshop.
+    \item Engagement in Open-Source Communities and Events: By presenting our workshop in open-source forums and at related events, we aim to draw in a community of practitioners and enthusiasts who are invested in the fields our workshop encompasses.
+    \item Through the combination of such channels, we aim to maximize outreach, foster engagement, and ensure a high level of participation, thereby contributing to the success and impact of our workshop.
+    
+\end{itemize}
+
+\section{Diversity \& Inclusion Commitment }
+
+In orchestrating the selection of organizers and speakers, we diligently endeavored to embody diversity in all its facets. Our final lineup stands as a testament to this commitment, showcasing a rich mosaic of diverse backgrounds. This diversity encapsulates variations in \textbf{gender, race, LGBTQ+ identities, affiliations, geographic locations, nationalities, scientific and industrial expertise}, ensuring representation from a spectrum of underrepresented groups. Our roster boasts a comprehensive range of scientific seniority, extending from rising PhD students to esteemed assistant and full professors, from academic researchers to industrial practitioners and policymakers, encapsulating a multitude of domains including \textbf{Large Language Models (LLM), Robotics, Computer Vision, Machine Learning, Optimization, Economics, and Social Sciences}. The invited talks are poised to bring a nuanced and multifaceted perspective to the AI Agent problem, with each speaker contributing their distinct insights rooted in their unique experiences. Through this workshop, we aspire to challenge and rectify the pervasive issue of underrepresentation within the AI community, aiming to foster a vibrant, open, and welcoming environment where discourse around AI Agents flourishes amidst a backdrop of diverse perspectives and inclusive dialogue.
+
+
+To create a truly diverse and inclusive environment, we may also invite/create true LLM-based agents to participate in our workshop, as they represent a new type of intelligence and life form. This may include different forms of generative AI assistants for different purposes during the workshop.
+
+\section{Access}
+In alignment with our enduring commitment to promoting diversity and inclusivity, we are pleased to inform that our workshop will embrace a hybrid format—integrating both in-person and virtual interactions. This arrangement ensures that all members of the ICLR community, irrespective of their geographic location or personal circumstances, can actively participate and engage in the discourse. We will be live streaming all presentations and interactive sessions throughout the workshop, thus allowing remote attendance for individuals who may be unable to attend the event in person. This initiative particularly seeks to accommodate LGBTQ+ researchers and those facing international travel restrictions. Leveraging online platforms such as Twitter, Reddit, Discord and Slack, we aim to create a vibrant and interactive virtual experience. Virtual attendees will have the opportunity to actively participate in audience-engaged segments of the workshop. This includes the submission of questions that can be addressed during panel discussions, promoting a rich, inclusive, and comprehensive dialogue among all participants, whether attending in person or virtually.
+
+We also plan to enhance the dissemination of knowledge by recording and publishing talks, sharing papers, posters and slides online, orchestrating a follow-up special issue in a relevant journal, and curating a dedicated webpage and GitHub repository featuring a diverse array of content. We are open to exploring additional avenues to further enrich the discourse and engagement within our community.
+
+\section{Previously Related Workshops}
+Large language models and language model agents have been one of the hottest topics in recent years. We are aware of the following related tutorials in the recent machine learning conferences:
+\begin{itemize}
+    \item Deeper Conversational AI (NeurIPS2020)
+    \item Learning for Interactive Agents (ICML2022)
+    \item Workshop on Theory of Mind in Communicating Agents (ICML 2023)
+    \item Foundation Models for Decision Making (NeurIPS 2023)
+\end{itemize}
+
+Each of them has some intersection with our proposal and inspired our plan. In our tentative workshop, we focus on the unique research question: How can we architect LLM-based AI agents to efficiently address real-world challenges (with rigorous performance guarantees)? We also pay special attention to the issue of Agent Society. Specifically, we stand out by the following distinctive factors:
+Diverse Thematic Range: Unlike past workshops with a narrow focus, ours explores a wide spectrum of LLM and autonomous agent topics, providing a more unique insight into the field.
+
+\begin{itemize}
+    \item Enhanced Multi-Agent Interaction Examination: Our workshop delves into multi-agents' interactions comprehensively, extending beyond previous discussions to explore complex dynamics with humans and other entities.
+    \item Embodiment and Exploration: A unique focus on AI agents’ embodiment, delving into their physical capabilities and sensory processing, sets our workshop apart from largely software-centric discussions in past events.
+    \item Exploration of Diverse Modalities: By venturing into diverse modalities and emerging domains, our workshop unveils novel insights, promoting interdisciplinary dialogue.
+    \item AI, Human Cognition, and Alignment: Our workshop transcends typical technical discourse, exploring AI's intersection with human cognition, ethics, and legal frameworks, inviting a deeper examination. Our workshop also endeavor to discuss the critical issue of Agent Alignment, which possesses unique challenges compared to classical LLM Alignment issues.
+\end{itemize}
+
+
+\section{Reviewing}
+In adherence to our diversity and inclusivity objectives, we are committed to implementing a double-blind reviewing process, complemented by the assembly of a diverse and comprehensive program committee. Each submission will be rigorously evaluated by a minimum of three reviewers to ensure a thorough and unbiased assessment. The organizers will execute decision-making in a transparent manner, upholding the integrity of the review process. 
+
+A distinctive aspect of our reviewing process is the emphasis on novelty and potential for stimulating discussions. Submissions showcasing innovative perspectives or those fostering meaningful dialogue will be particularly valued. This criterion will be clearly articulated on the submission page to guide prospective authors accordingly. To uphold the highest standards of ethics and professionalism, we will meticulously address any conflicts of interest. Reviewers will be required to declare any conflicts prior to paper assignment, and report any unforeseen conflicts post-assignment. In instances where a conflict of interest arises with an organizer, the double-blind reviewing for that particular submission will be managed by an alternative organizer using channels outside the conventional conference management tools. The involved organizer will abstain from any decision-making pertaining to that submission, ensuring an impartial adjudication conducted by the remaining organizers. Upon conclusion of the review process, the final list of accepted papers will be disclosed on the workshop website. The archival status of each paper will be clearly indicated, providing clarity and transparency.
+
+We encourage submissions of four types of papers of varied lengths: empirical, theoretical, position papers, and thought pieces. Both full papers and works-in-progress are welcomed. The review process will be conducted on OpenReview, with accepted papers presented as posters. A select subset will be chosen for oral presentation, allowing for a deeper dive into the research findings.
+
+
+
+\section{Tentative Speakers/Panelists/Committees}
+\textbf{Animesh Garg} @GaTech \& NVIDIA (co-organizer or speaker, confirmed) 
+
+Bio: Animesh Garg is a Stephen Fleming Early Career Professor in Computer Science at Georgia Tech. Prior to this, he was an Assistant Professor of Computer Science at University of Toronto and a Faculty Member at the Vector Institute. He directed the UofT People, AI and Robotics (PAIR) group. He was affiliated with Mechanical and Industrial Engineering (courtesy) and UofT Robotics Institute. He is also a Sr. Research Scientist at NVIDIA. He earned M.S. in Computer Science and Ph.D. in Operations Research from UC, Berkeley. He worked with Ken Goldberg at Berkeley AI Research (BAIR). He also worked closely with Pieter Abbeel, Alper Atamturk \& UCSF Radiation Oncology. He was later a postdoc at Stanford AI Lab with Fei-Fei Li and Silvio Savarese. His research vision is to build the Algorithmic Foundations for Generalizable Autonomy, that enables robots to acquire skills, at both cognitive \& dexterous levels, and to seamlessly interact \& collaborate with humans in novel environments. His group focuses on understanding structured inductive biases and causality for decision making. In particular they are looking at multimodal object-centric and spatiotemporal event representations, self-supervised pre-training for reinforcement learning \& control, principle of efficient dexterous skill learning.
+
+
+\textbf{Ari Holtzman} @UChicago (speaker, confirmed)  
+
+Bio: Ari Holtzman is an Assistant Professor in Computer Science and Data Science, starting in July 2024, and a founding member of the UChicago Communication \& Intelligence group (C\&I). He is currently a Postdoc at Meta. His research interests have spanned everything from dialogue, including winning the first Amazon Alexa Prize in 2017, to fundamental research on text generation, such as proposing Nucleus Sampling, a decoding algorithm used broadly in deployed systems such as the OpenAI API as well as in academic research.  He is currently interested in exploring how models can be used to represent the macro capacities of agents working together (even if they sometimes fumble the micro-interactions), taxonomizing model behavior into a coherent framework to allow for rigorous hypothesis formation, and proposing fundamental laws of generative models. He recently gave a keynote address at the International Conference of Social Computing about LLMs as Linguistic Spies. He obtained his PhD from the University of Washington under the supervision of Luke Zettlemoyer, where his thesis has been nominated for the ACM Dissertation Award.  
+
+A tentative topic: Generative Models as a Complex Systems Science: How can we make sense of large language model behavior?
+
+
+{\bf Bernard Ghanem} @KAUST (speaker, confirmed)  
+  
+Bio: Bernard Ghanem is an Associate Professor of ECE and CS, theme leader at the Visual Computing Center, and Deputy Director of the AI Initiative at King Abdullah University of Science and Technology (KAUST) in Saudi Arabia. He has over 15 years of experience in computer vision with research interests spanning several topics including activity understanding in videos, 3D computer vision,and fundamentals of deep learning. Bernard has played an active role in the vision community as a workshop organizer (e.g. ActivityNet Workshop at CVPR 2016-2021), a tutorial organizer (CVPR 2013), a tutorial co-chair of ACCV 2016, Area Chair for CVPR 2018/2021/2022, ICCV 2019/2021, ICLR 2021, and AAAI 2021, and an Associate Editor for IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) from 2021-present. More details can be found at www.bernardghanem.com and www.ivul.kaust.edu.sa.  
+
+A tentative topic: CAMEL: Communicative Agents for ``Mind'' Exploration of Large Scale Language Model Society.
+
+
+{\bf Diyi Yang} @Stanford (speaker, confirmed)  
+  
+Bio: Diyi Yang is an assistant professor in the Computer Science Department at Stanford, affiliated with the Stanford NLP Group, Stanford HCI Group, Stanford AI Lab (SAIL), and Stanford Human-Centered Artificial Intelligence (HAI). She is interested in Computational Social Science, and Natural Language Processing. Her research goal is to better understand human communication in social context and build socially aware language technologies to support human-human and human-computer interaction.  
+
+A tentative topic: Training Socially Aligned Language Models in Simulated Human Society.
+
+
+{\bf Edward Grefenstette} @Google DeepMind (speaker or co-host, confirmed conditional on the bandwidth and the approval from DeepMind)  
+  
+Bio: Edward Grefenstette is a Franco-(British)-American computer scientist, and serves as Director of Research at Google DeepMind, and as an Honorary Professor at UCL. He previously was Head of Machine Learning at Cohere, a research scientist at Cohere, before which he was at Research Scientist and RL Area Lead at Facebook AI Research, preceded by his time as a Staff Research Scientist at DeepMind, following a (short) period as the CTO of Dark Blue Labs, which he also co-founded. His research draws on topics and methods from Machine Learning, Computational Linguistics and Quantum Information Theory (specifically the use of category theoretical frameworks). His main project presently involves developing, implementing and evaluating compositional vector-based models of natural language semantics. He is generally interested in theories of—and applications for—mathematical linguistics, natural language semantics, and empirical semantic knowledge discovery.  
+
+A tentative topic: ChatArena: Multi-Agent Language Game Environments for Large Language Models
+
+
+{\bf Jacob Andreas} @MIT (speaker, confirmed)  
+
+Bio: Jacob Andreas is an associate professor at MIT in the Department of Electrical Engineering and Computer Science as well as the Computer Science and Artificial Intelligence Laboratory. His research aims to build intelligent systems that can communicate effectively using language and learn from human guidance. Jacob earned his Ph.D. from UC Berkeley, his M.Phil. from Cambridge (where he studied as a Churchill scholar) and his B.S. from Columbia. He has been named a National Academy of Sciences Kavli Fellow, and has received the NSF CAREER award, MIT's Junior Bose and Kolokotrones teaching awards, and paper awards at ACL, ICML and NAACL.  
+
+A tentative topic: Language Models as Agent Models.
+
+
+{\bf Michael Bernstein} @Stanford (speaker, confirmed)  
+Bio: Michael Bernstein is an Associate Professor of Computer Science at Stanford University, where he is a Bass University Fellow. His research in human-computer interaction focuses on the design of social computing systems. This research has won best paper awards at top conferences in human-computer interaction, including CHI, CSCW, ICWSM, and UIST, and has been reported in venues such as The New York Times, Wired, Science, and Nature. Michael has been recognized with an Alfred P. Sloan Fellowship, UIST Lasting Impact Award, and the Patrick J. McGovern Tech for Humanity Prize. He holds a bachelor's degree in Symbolic Systems from Stanford University, as well as a master's degree and a Ph.D. in Computer Science from MIT.  
+
+A tentative topic: Generative Agents: Interactive Simulacra of Human Behavior.
+
+
+{\bf Qi Liu} @HKU (committee member, confirmed)  
+  
+Bio: Qi Liu is an assistant professor at the Department of Computer Science, the University of Hong Kong, and a cofounder of Reka. He earned his Ph.D. in computer science from the University of Oxford. In the past, he obtained a Master of Science degree from the National University of Singapore, and a Bachelor of Engineering degree from Shandong University. His research interests include natural language processing and machine learning. His research is centered on enabling computers to comprehend human language. He also spent some time at Google DeepMind, Facebook AI Research, and Microsoft Research before and during his PhD study.
+
+
+{\bf Tim Rocktäschel} @Google DeepMind (speaker, confirmed conditional on approval from DeepMind)  
+  
+Bio: Tim Rocktäschel is a Senior Staff Research Scientist and the Open-Endedness Team Lead at Google DeepMind. He is also a Professor of Artificial Intelligence at the Centre for Artificial Intelligence in the Department of Computer Science at University College London (UCL) where he is the PI of the UCL Deciding, Acting, and Reasoning with Knowledge (DARK) Lab, and a Scholar of the European Laboratory for Learning and Intelligent Systems (ELLIS). Before, he was a Manager, Research Scientist, and Area Lead at Meta AI (FAIR), a Postdoctoral Researcher in Reinforcement Learning at the Whiteson Research Lab at the University of Oxford, a Junior Research Fellow in Computer Science at Jesus College, and a Stipendiary Lecturer in Computer Science at Hertford College. He obtained his Ph.D. from UCL under the supervision of Sebastian Riedel, where he was awarded a Microsoft Research Ph.D. Scholarship in 2013 and a Google Ph.D. Fellowship in 2017. His work focuses on Reinforcement Learning and Open-Endedness. 
+  
+A tentative topic: Promptbreeder: Self-Referential Self-Improvement Via Prompt Evolution.
+
+
+{\bf Zhaoran Wang} @NWU (speaker/committee, confirmed)  
+
+Zhaoran Wang is an assistant professor in the Departments of Industrial Engineering \& Management Sciences and Computer Science (by courtesy) at Northwestern University (since 2018). He is affiliated with the Centers for Deep Learning and Optimization \& Statistical Learning. The long-term goal of his research is to develop a new generation of data-driven decision-making methods, theory, and systems, which tailor artificial intelligence towards addressing pressing societal challenges. To this end, his research aims at: making deep reinforcement learning more efficient, both computationally and statistically, in a principled manner to enable its applications in critical domains; scaling deep reinforcement learning to design and optimize societal-scale multi-agent systems, especially those involving cooperation and/or competition among humans and/or robots. With this aim in mind, his research interests span across machine learning, optimization, statistics, game theory, and information theory.  
+
+A tentative topic: Reason for Future, Act for Now: A Principled Architecture for Autonomous LLM Agents
+
+We are currently finalizing our lineup of speakers, panelists, and committee members from a range of prestigious institutions and organizations. This roster includes OpenAI, Google, Microsoft Research, NVIDIA, Stanford, MIT, CMU, UCB, GaTech, KAUST, UChicago, TTIC, NWU, Princeton, JHU, and many more. Stay tuned for further updates!
+
+
+Additional tentative list for researchers to invite:
+\begin{itemize}
+\item \textbf{Rayid Ghani} @CMU (formerly at UChicago, and as Chief Scientist at Obama for America 2012),
+\item \textbf{Jürgen Schmidhuber} @KAUST,
+\item \textbf{Anima Anandkumar} @Caltech \& NVIDIA,
+\item \textbf{De-An Huang} @NVIDIA,
+\item \textbf{Yuke Zhu} @UT Austin,
+\item \textbf{Dale Schuurmans} @Google,
+\item \textbf{Bo Dai} @Google / GaTech,
+\item \textbf{Machel Reid} @Google,
+\item \textbf{Andrew M. Dai} @Google, 
+\item \textbf{Denny Zhou} @Google, 
+\item \textbf{Quoc V. Le} @Google,
+\item \textbf{Minh-Thang Luong} @Google,
+\item \textbf{Meredith Ringel Morris} @Google,
+\item \textbf{Andy Zeng} @Google,
+\item \textbf{Jonathan Tompson} @Google,
+\item \textbf{Igor Mordatch} @Google,
+\item \textbf{Fei Xia} @Google,
+\item \textbf{Aakanksha Chowdhery} @Google,
+\item \textbf{Felix Hill} @Google,
+\item \textbf{Dharshan Kumaran} @Google,
+\item \textbf{Ari Seff} @Waymo,
+\item \textbf{Adam Tauman Kalai} @MSR,
+\item \textbf{Chi Wang} @MSR,
+\item \textbf{Rosa I. Arriaga} @GaTech,
+\item \textbf{Chao Zhang} @GaTech,
+\item \textbf{Christopher D Manning} @Stanford,
+\item \textbf{Percy Liang} @Stanford,
+\item \textbf{Fei-Fei Li} @Stanford,
+\item \textbf{Diyi Yang} @Stanford, 
+\item \textbf{James L. McClelland} @Stanford,
+\item \textbf{Michael S. Bernstein} @Stanford,
+\item \textbf{Mina Lee} @Stanford / UChicago,
+\item \textbf{Ari Holtzman} @UW / UChicago,
+\item \textbf{David McAllester} @TTIC / UChicago,
+\item \textbf{Chenhao Tan} @UChicago,
+\item \textbf{Hongyuan Mei} @TTIC,
+\item \textbf{Karen Livescu} @TTIC,
+\item \textbf{Lilian Weng} @OpenAI,
+\item \textbf{Ilya Sutskever} @OpenAI,
+\item \textbf{Jason Wei} @OpenAI,
+\item \textbf{Zhaoran Wang} @NWU,
+\item \textbf{Noga Zaslavsky} @UCI,
+\item \textbf{Roger Levy} @MIT,
+\item \textbf{Atlas Wang} @UTA,
+\item \textbf{Soroush Vosoughi} @Dartmouth,
+\item \textbf{Sergey Levine} @UCB,
+\item \textbf{Peter Abeel} @UCB,
+\item \textbf{Dan Klein} @UCB,
+\item \textbf{Jie Tang} @THU,
+\item \textbf{Yuxiao Dong} @THU,
+\item \textbf{Minlie Huang} @THU,
+\item \textbf{Yusuke Iwasawa} @UTokyo, 
+\item \textbf{Shunyu Yao} @Princeton,
+\item \textbf{Karthik Narasimhan} @Princeton,
+\item \textbf{Thilo Hagendorff} @University of Stuttgart,
+\item \textbf{Jason Eisner} @JHU,
+\item \textbf{Jacob Andreas} @MIT,
+\item \textbf{Qingyun Wu} @PSU,
+\item \textbf{Mirella Lapata} @Edinburg University,
+\item \textbf{Phillip Isola} @MIT,
+\item \textbf{Tushar Khot} @AI2
+\end{itemize}
+
+
+More to be continued…
 
 
 % \bibliography{main}
