@@ -1,0 +1,147 @@
+
+\documentclass[10pt]{article} % For LaTeX2e
+\usepackage[accepted]{tmlr}
+% If accepted, instead use the following line for the camera-ready submission:
+%\usepackage[accepted]{tmlr}
+% To de-anonymize and remove mentions to TMLR (for example for posting to preprint servers), instead use the following:
+%\usepackage[preprint]{tmlr}
+
+% Optional math commands from https://github.com/goodfeli/dlbook_notation.
+\input{math_commands.tex}
+
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+
+\title{\Large The $1^{\text{st}}$ Workshop on Society of Agents with Large Language Models\\{\large{\normalfont On Theory and Practice in Embodiments, Alignments, Multi-Agent Simulations and More}}}
+
+
+
+% Authors must not appear in the submitted version. They should be hidden
+% as long as the tmlr package is used without the [accepted] or [preprint] options.
+% Non-anonymous submissions will be rejected without review.
+
+\author{\name Guohao Li \email guohao.li@kaust.edu.sa\\
+        \addr KAUST \\
+        \\
+        \name Jiankai Sun \email jksun@stanford.edu\\
+        \addr Stanford \\
+        \\
+        \name Ziyu Ye \email ziyuye@uchicago.edu \\
+        \addr UChicago \\ 
+        \\
+        \name Tianqi Xu \email tianqi.xu@kaust.edu.sa\\
+        \addr KAUST \\ 
+        \\        
+        \name Mingyu Ding \email myding@berkeley.edu\\
+        \addr UC Berkeley \\ 
+        \\        
+        \name Linxi 'Jim' Fan \email linxif@nvidia.com\\
+        \addr NVIDIA \\ 
+        \\        
+        \name Animesh Garg \email animesh.garg@gatech.edu\\
+        \addr GaTech \& NVIDIA \\ 
+        \\
+        \name Zijian Wang \email zjwang@stanford.edu\\
+        \addr Meta \\ 
+        \\
+        \name Matthias Müller \email matthias.mueller.2@kaust.edu.sa\\
+        \addr Apple \\ 
+        \\
+        \name Liang-Jun Zhang \email liangjun.zhang@gmail.com\\
+        \addr Baidu USA \\ 
+        \\    
+        \name Haifeng Xu \email haifengxu@uchicago.edu \\
+        \addr UChicago \\ 
+        \\
+        \name Shuran Song \email shuran@stanford.edu \\
+        \addr Stanford \\ 
+        \\    
+        \name Masayoshi Tomizuka \email tomizuka@berkeley.edu\\
+        \addr UC Berkeley \\ 
+        \\
+        \name Mac Schwager  \email schwager@stanford.edu\\
+        \addr Stanford \\ 
+        \\    
+        \name Philip Torr  \email philip.torr@eng.ox.ac.uk\\
+        \addr Oxford \\ 
+        \\
+        \\
+        \\
+        }
+
+
+
+% The \author macro works with any number of authors. Use \AND 
+% to separate the names and addresses of multiple authors.
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\def\month{MM}  % Insert correct month for camera-ready version
+\def\year{YYYY} % Insert correct year for camera-ready version
+\def\openreview{\url{https://openreview.net/forum?id=XXXX}} % Insert correct link to OpenReview for camera-ready version
+
+
+\begin{document}
+
+
+\maketitle
+\vspace{-5pt}
+\begin{abstract}
+A large language model (LLM) based autonomous agent is a system where the large language model serves as the agent's central intelligence, supplemented by key components such as reasoning, planning, memory, multi-modal processing and action execution. The rapid evolution of LLMs heralds a new era of problem-solving capabilities on various real-world problems, yet this autonomy also brings forth new issues such as alignment that merit thorough examination to ensure responsible deployment. This workshop beckons a diverse cohort from the large model and autonomous agent community, offering a platform for researchers, graduate students, industry professionals and policymakers to glean valuable insights and practical knowledge. Through a well-structured agenda, we aim to delve into the myriad facets of large models and autonomous agents. As interest in large models and autonomous agents surges across academic and industrial realms, we anticipate a robust turnout, creating a fertile ground for collaborative discourse, knowledge dissemination, as well as networking opportunities.
+\end{abstract}
+
+\section{Introduction}
+A large language model (LLM) based autonomous agent is a system where the large language model serves as the agent's central intelligence, supplemented by key components such as reasoning, planning, memory, multi-modal processing and action execution. The rapid evolution of LLMs heralds a new era of problem-solving capabilities on various real-world problems, yet this autonomy also brings forth new issues such as alignment that merit thorough examination to ensure responsible deployment. This workshop beckons a diverse cohort from the large model and autonomous agent community, offering a platform for researchers, graduate students, industry professionals and policymakers to glean valuable insights and practical knowledge. Through a well-structured agenda, we aim to delve into the myriad facets of large models and autonomous agents. As interest in large models and autonomous agents surges across academic and industrial realms, we anticipate a robust turnout, creating a fertile ground for collaborative discourse, knowledge dissemination, as well as networking opportunities.
+
+We focus on shedding light on the following important questions:
+\begin{itemize}
+    \item {\bf How can we design and utilize large model based agents to efficiently address existing and emerging real-world challenges} (potentially with rigorous theoretical guarantees){\bf ?}
+    \item {\bf How will embodied agents play a role in automation in the future world?} 
+    \item {\bf How can a society of agents simulate human society?}
+    \item {\bf How will agents and humans coexist in society?}
+\end{itemize}
+
+Building on the fundamental objectives of this workshop, our agenda is meticulously crafted to delve into various pivotal facets of large models and autonomous agents, addressing a range of crucial questions through the following thematic areas:
+
+
+\paragraph{Foundation Models for Agents.}. This theme is on various aspects of foundation models for agents, including network architectures, optimization methods, training protocols, and so on.
+
+\paragraph{Algorithms and Systems for and with Agents.} We focus on enhancing agent performance using practical algorithm and system designs. For example, despite the advancements in LLM-based agents, their planning and reasoning capabilities remain limited. To address this, we're interested in algorithms such as curriculum, active, continual, meta learning and so on. We are also interested in how the inclusion of agents can improve existing algorithms and systems.
+
+\paragraph{\underline{Theoretical Foundations of Agents.}} We are interested in developing theoretical frameworks to understand behaviors and underlying mechanisms of large model based agents; we are also interested in designing agent systems which can provably achieve certain performance criteria.
+
+\paragraph{\underline{Automation, Simulation and Interactions in Agent Society.}} Our focus will be on scrutinizing AI agents' interactions with humans, computers, tools, simulators, and their AI counterparts. This includes a comprehensive exploration of the dynamics at play during conversations, interactive learning, and multi-agent learning scenarios in which agents form a society, with an emphasis on their automation, communication, collaborative and competitive competencies.
+
+\paragraph{\underline{Embodied and Multimodal Agents.}} This section is dedicated to exploring the realm of AI agents' embodiment, spanning aspects such as perception, action, robotics, and multimodality, with the goal of augmenting their physical capabilities and sensory processing prowess. 
+
+\paragraph{The Interplay of Mind, Brain, Psychology, Philosophy and Social Sciences with Agents.} This segment is dedicated to gleaning insights from diverse fields such as cognitive science, neuroscience, linguistics, and psycholinguistics for the development and deployment of large model based agents, while also critically examining the influence of agents on them per se.
+Evaluation Protocols, Benchmarks, Datasets, and Applications for Agents: A particular emphasis will be placed on underexplored domains like natural science, medicine, education, and other emerging applications of agents.
+
+\paragraph{Safety, Alignment and Other Societal Concerns with Agents.} We look into safety and alignment issues for large model based agents, including concerns like trustworthiness, privacy, fairness and bias. We pay special attention to emerging adversarial attacks on foundation models and agent systems, which are extremely crucial given the wide spread of pretrained models and agent APIs. 
+
+
+With the wide coverage, this year we put special emphasis on: {\bf Theoretical Foundations of Agents}, {\bf Automation, Simulation and Interaction in Agent Society}, {\bf Embodied and Multimodal Agents}, {\bf Safety and Alignment Issues}. \textcolor{red}{The topics may be adjusted to prevent overlaps. Given the significant impact and widespread applications of AI agents, our goal is to complement with other workshops with potentially similar topics, ensuring our unique contributions stand out, corroborated by our distinctive backgrounds of organizers and speakers.}
+
+\section{Modality}
+The workshop will be hybrid, offering both in-person and virtual attendance options to cater to everyone's needs, ensuring a seamless and inclusive experience for all.
+
+\section{Tentative Schedule}
+
+
+
+
+
+
+
+% \bibliography{main}
+% \bibliographystyle{tmlr}
+
+% \appendix
+% \section{Appendix}
+% You may include other additional sections here.
+
+\end{document}
